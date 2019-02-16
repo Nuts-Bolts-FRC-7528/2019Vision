@@ -418,9 +418,9 @@ public final class Main {
             ntinst.startClientTeam(team);
         }
 
-        NetworkTable  table = ntinst.getTable("datatable");
+        NetworkTable  table = ntinst.getTable("vision");
         NetworkTableEntry centerPix = table.getEntry("centerPix");
-        ntinst.startClientTeam(7528);
+        ntinst.startClientTeam(7528);   
         ntinst.startDSClient();
 
         // start cameras
@@ -439,18 +439,26 @@ public final class Main {
                 double leftX = Integer.MAX_VALUE;
                 double rightX = Integer.MIN_VALUE;
                 for(int i = 0; i < pipeline.findLinesOutput.size(); i++){
-                    double x = pipeline.findLinesOutput.get(i).x1;
+                    double x1 = pipeline.findLinesOutput.get(i).x1;
+                    double x2 = pipeline.findLinesOutput.get(i).x2;
+                    double x;
+                    if(x2 < x1){
+                        x = x2;
+                    } else {
+                        x = x1;
+                    }
                     if (x < leftX) {
                         leftX = x;
                     }
                     if(x > rightX) {
                         rightX = x;
                     }
+
                 }
-                centerPix.setDouble((leftX + rightX) / 2);
-                System.out.println("Center X: " + (leftX + rightX) / 2);
-                System.out.println("Left X: " + leftX);
-                System.out.println("Right X: " + rightX);
+                centerPix.setDouble(((leftX + rightX) / 2)*5);
+                System.out.println("Center X: " + (int)((leftX + rightX) / 2)*5);
+                System.out.println("Left X: " + (int)leftX*5);
+                System.out.println("Right X: " + (int)rightX*5);
             });
       /* something like this for GRIP:
       VisionThread visionThread = new VisionThread(cameras.get(0),
