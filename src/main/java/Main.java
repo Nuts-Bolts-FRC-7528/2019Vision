@@ -5,20 +5,7 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-import java.io.IOException;
-import java.lang.reflect.Array;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.List;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
-
+import com.google.gson.*;
 import edu.wpi.cscore.MjpegServer;
 import edu.wpi.cscore.UsbCamera;
 import edu.wpi.cscore.VideoSource;
@@ -28,10 +15,14 @@ import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.networktables.NetworkTableInstance;
 import edu.wpi.first.vision.VisionPipeline;
 import edu.wpi.first.vision.VisionThread;
-
 import org.opencv.core.*;
 import org.opencv.imgproc.Imgproc;
-import org.opencv.imgproc.LineSegmentDetector;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
 
 /*
    JSON format:
@@ -475,7 +466,21 @@ public final class Main {
                 /*
                 * Actual code for doing things goes here
                  */
+                ArrayList<MatOfPoint> contours =  pipeline.convexHullsOutput();
+                int leftX = Integer.MAX_VALUE; //smallest X
+                int rightX = Integer.MIN_VALUE; //largest X
 
+                for (MatOfPoint contour : contours) {
+                    for(int i = 0; i < contour.toArray().length; i++) {
+                        if(contour.toArray()[i].x < leftX) {
+                            leftX = (int)contour.toArray()[i].x;
+                        } else if(contour.toArray()[i].x > rightX) {
+                            rightX = (int)contour.toArray()[i].x;
+                        }
+                    }
+                }
+                centerPix.setDouble((leftX + rightX) / 2.0);
+                System.out.println("Center pixel: " + ((leftX + rightX) / 2.0));
             });
       /* something like this for GRIP:
       VisionThread visionThread = new VisionThread(cameras.get(0),
