@@ -91,36 +91,8 @@
       <grip:Input step="4" socket="0"/>
       <grip:Output step="4" socket="0" previewed="true"/>
     </grip:Step>
-    <grip:Step name="NTPublish ContoursReport">
-      <grip:Input step="5" socket="0"/>
-      <grip:Input step="5" socket="1">
-        <value>myContoursReport</value>
-      </grip:Input>
-      <grip:Input step="5" socket="2">
-        <value>false</value>
-      </grip:Input>
-      <grip:Input step="5" socket="3">
-        <value>true</value>
-      </grip:Input>
-      <grip:Input step="5" socket="4">
-        <value>false</value>
-      </grip:Input>
-      <grip:Input step="5" socket="5">
-        <value>false</value>
-      </grip:Input>
-      <grip:Input step="5" socket="6">
-        <value>false</value>
-      </grip:Input>
-      <grip:Input step="5" socket="7">
-        <value>false</value>
-      </grip:Input>
-    </grip:Step>
   </steps>
   <connections>
-    <grip:Connection>
-      <grip:Output step="4" socket="0" previewed="true"/>
-      <grip:Input step="5" socket="0"/>
-    </grip:Connection>
     <grip:Connection>
       <grip:Output source="0" socket="0" previewed="true"/>
       <grip:Input step="0" socket="0"/>
