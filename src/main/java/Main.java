@@ -15,6 +15,7 @@ import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.networktables.NetworkTableInstance;
 import edu.wpi.first.vision.VisionPipeline;
 import edu.wpi.first.vision.VisionThread;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import org.opencv.core.*;
 import org.opencv.imgproc.Imgproc;
 
@@ -23,6 +24,8 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+
+import static edu.wpi.first.wpilibj.smartdashboard.SmartDashboard.getEntry;
 
 /*
    JSON format:
@@ -449,6 +452,7 @@ public final class Main {
         }
 
         NetworkTable  table = ntinst.getTable("vision");
+        NetworkTableEntry isTracking = SmartDashboard.getEntry("isTrackingBall");
         NetworkTableEntry centerPix = table.getEntry("centerPix");
         ntinst.startClientTeam(7528);   
         ntinst.startDSClient();
@@ -480,6 +484,11 @@ public final class Main {
                     }
                 }
                 centerPix.setDouble((leftX + rightX) / 2.0);
+                if(leftX != Integer.MAX_VALUE) { //If the ball IS found
+                    isTracking.setBoolean(true);
+                } else { //If the ball is NOT found
+                    isTracking.setBoolean(false);
+                }
                 System.out.println("Center pixel: " + ((leftX + rightX) / 2.0));
             });
       /* something like this for GRIP:
