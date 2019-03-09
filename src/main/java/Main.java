@@ -440,7 +440,6 @@ public final class Main {
 
         //Outputs
         private Mat hsvThresholdOutput = new Mat();
-        private Mat cvErodeOutput = new Mat();
         private ArrayList<MatOfPoint> findContoursOutput = new ArrayList<MatOfPoint>();
         private ArrayList<MatOfPoint> filterContoursOutput = new ArrayList<MatOfPoint>();
         private ArrayList<MatOfPoint> convexHullsOutput = new ArrayList<MatOfPoint>();
@@ -452,25 +451,16 @@ public final class Main {
         /**
          * This is the primary method that runs the entire pipeline and updates the outputs.
          */
-        @Override	public void process(Mat source0) {
+        public void process(Mat source0) {
             // Step HSV_Threshold0:
             Mat hsvThresholdInput = source0;
-            double[] hsvThresholdHue = {0.0, 180.0};
-            double[] hsvThresholdSaturation = {69.63276836158191, 255.0};
+            double[] hsvThresholdHue = {25.423728813559322, 180.0};
+            double[] hsvThresholdSaturation = {163.27683615819208, 255.0};
             double[] hsvThresholdValue = {77.04776856480918, 255.0};
             hsvThreshold(hsvThresholdInput, hsvThresholdHue, hsvThresholdSaturation, hsvThresholdValue, hsvThresholdOutput);
 
-            // Step CV_erode0:
-            Mat cvErodeSrc = hsvThresholdOutput;
-            Mat cvErodeKernel = new Mat();
-            Point cvErodeAnchor = new Point(-1, -1);
-            double cvErodeIterations = 1;
-            int cvErodeBordertype = Core.BORDER_CONSTANT;
-            Scalar cvErodeBordervalue = new Scalar(-1);
-            cvErode(cvErodeSrc, cvErodeKernel, cvErodeAnchor, cvErodeIterations, cvErodeBordertype, cvErodeBordervalue, cvErodeOutput);
-
             // Step Find_Contours0:
-            Mat findContoursInput = cvErodeOutput;
+            Mat findContoursInput = hsvThresholdOutput;
             boolean findContoursExternalOnly = false;
             findContours(findContoursInput, findContoursExternalOnly, findContoursOutput);
 
@@ -478,15 +468,15 @@ public final class Main {
             ArrayList<MatOfPoint> filterContoursContours = findContoursOutput;
             double filterContoursMinArea = 25.0;
             double filterContoursMinPerimeter = 83.0;
-            double filterContoursMinWidth = 30.0;
-            double filterContoursMaxWidth = 1000;
-            double filterContoursMinHeight = 28.0;
-            double filterContoursMaxHeight = 1000;
+            double filterContoursMinWidth = 12.0;
+            double filterContoursMaxWidth = 1000.0;
+            double filterContoursMinHeight = 22.0;
+            double filterContoursMaxHeight = 1000.0;
             double[] filterContoursSolidity = {0, 100};
-            double filterContoursMaxVertices = 1000000;
-            double filterContoursMinVertices = 0;
-            double filterContoursMinRatio = 0;
-            double filterContoursMaxRatio = 1000;
+            double filterContoursMaxVertices = 1000000.0;
+            double filterContoursMinVertices = 0.0;
+            double filterContoursMinRatio = 0.0;
+            double filterContoursMaxRatio = 1000.0;
             filterContours(filterContoursContours, filterContoursMinArea, filterContoursMinPerimeter, filterContoursMinWidth, filterContoursMaxWidth, filterContoursMinHeight, filterContoursMaxHeight, filterContoursSolidity, filterContoursMaxVertices, filterContoursMinVertices, filterContoursMinRatio, filterContoursMaxRatio, filterContoursOutput);
 
             // Step Convex_Hulls0:
@@ -501,14 +491,6 @@ public final class Main {
          */
         public Mat hsvThresholdOutput() {
             return hsvThresholdOutput;
-        }
-
-        /**
-         * This method is a generated getter for the output of a CV_erode.
-         * @return Mat output from CV_erode.
-         */
-        public Mat cvErodeOutput() {
-            return cvErodeOutput;
         }
 
         /**
@@ -549,30 +531,6 @@ public final class Main {
             Imgproc.cvtColor(input, out, Imgproc.COLOR_BGR2HSV);
             Core.inRange(out, new Scalar(hue[0], sat[0], val[0]),
                     new Scalar(hue[1], sat[1], val[1]), out);
-        }
-
-        /**
-         * Expands area of lower value in an image.
-         * @param src the Image to erode.
-         * @param kernel the kernel for erosion.
-         * @param anchor the center of the kernel.
-         * @param iterations the number of times to perform the erosion.
-         * @param borderType pixel extrapolation method.
-         * @param borderValue value to be used for a constant border.
-         * @param dst Output Image.
-         */
-        private void cvErode(Mat src, Mat kernel, Point anchor, double iterations,
-                             int borderType, Scalar borderValue, Mat dst) {
-            if (kernel == null) {
-                kernel = new Mat();
-            }
-            if (anchor == null) {
-                anchor = new Point(-1,-1);
-            }
-            if (borderValue == null) {
-                borderValue = new Scalar(-1);
-            }
-            Imgproc.erode(src, dst, kernel, anchor, (int)iterations, borderType, borderValue);
         }
 
         /**
@@ -738,11 +696,13 @@ public final class Main {
                 ArrayList<MatOfPoint> contours =  pipeline.convexHullsOutput();
                 int[] minMax = findMinAndMaxX(contours);
 
-                cargoCenterPix.setDouble((minMax[0] + minMax[1]) / 2.0);
                 if(minMax[0] != Integer.MAX_VALUE) { //If the ball IS found
                     isTrackingCargo.setBoolean(true);
+                    cargoCenterPix.setDouble((minMax[0] + minMax[1]) / 2.0);
+
                 } else { //If the ball is NOT found
                     isTrackingCargo.setBoolean(false);
+                    cargoCenterPix.setDouble(-1);
                 }
                 System.out.println("Center pixel CARGO: " + ((minMax[0] + minMax[1]) / 2.0));
             });
@@ -755,11 +715,12 @@ public final class Main {
                 ArrayList<MatOfPoint> contours = pipeline.convexHullsOutput();
                 int[] minMax = findMinAndMaxX(contours);
 
-                hatchCenterPix.setDouble((minMax[0] + minMax[1]) / 2.0);
                 if(minMax[0] != Integer.MAX_VALUE) {
                     isTrackingHatch.setBoolean(true);
+                    hatchCenterPix.setDouble((minMax[0] + minMax[1]) / 2.0);
                 } else {
                     isTrackingHatch.setBoolean(false);
+                    hatchCenterPix.setDouble(-1);
                 }
                 System.out.println("Center pixel HATCH: " + ((minMax[0] + minMax[1]) / 2.0));
             });
