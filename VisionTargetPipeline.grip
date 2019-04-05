@@ -1,0 +1,90 @@
+<grip:Pipeline>
+  <sources>
+    <grip:Camera>
+      <property name="address" value="http://10.75.28.20:1181/stream.mjpg"/>
+    </grip:Camera>
+  </sources>
+  <steps>
+    <grip:Step name="HSV Threshold">
+      <grip:Input step="0" socket="0"/>
+      <grip:Input step="0" socket="1">
+        <value>
+          <double>72.84172661870504</double>
+          <double>93.99317406143345</double>
+        </value>
+      </grip:Input>
+      <grip:Input step="0" socket="2">
+        <value>
+          <double>48.156474820143885</double>
+          <double>150.5631399317406</double>
+        </value>
+      </grip:Input>
+      <grip:Input step="0" socket="3">
+        <value>
+          <double>133.00359712230218</double>
+          <double>231.0665529010239</double>
+        </value>
+      </grip:Input>
+      <grip:Output step="0" socket="0" previewed="true"/>
+    </grip:Step>
+    <grip:Step name="CV erode">
+      <grip:Input step="1" socket="0"/>
+      <grip:Input step="1" socket="1"/>
+      <grip:Input step="1" socket="2"/>
+      <grip:Input step="1" socket="3">
+        <value>1</value>
+      </grip:Input>
+      <grip:Input step="1" socket="4">
+        <value>BORDER_CONSTANT</value>
+      </grip:Input>
+      <grip:Input step="1" socket="5"/>
+      <grip:Output step="1" socket="0" previewed="true"/>
+    </grip:Step>
+    <grip:Step name="Find Contours">
+      <grip:Input step="2" socket="0"/>
+      <grip:Input step="2" socket="1">
+        <value>false</value>
+      </grip:Input>
+      <grip:Output step="2" socket="0" previewed="true"/>
+    </grip:Step>
+    <grip:Step name="Convex Hulls">
+      <grip:Input step="3" socket="0"/>
+      <grip:Output step="3" socket="0" previewed="true"/>
+    </grip:Step>
+  </steps>
+  <connections>
+    <grip:Connection>
+      <grip:Output step="0" socket="0" previewed="true"/>
+      <grip:Input step="1" socket="0"/>
+    </grip:Connection>
+    <grip:Connection>
+      <grip:Output source="0" socket="0" previewed="true"/>
+      <grip:Input step="0" socket="0"/>
+    </grip:Connection>
+    <grip:Connection>
+      <grip:Output step="2" socket="0" previewed="true"/>
+      <grip:Input step="3" socket="0"/>
+    </grip:Connection>
+    <grip:Connection>
+      <grip:Output step="1" socket="0" previewed="true"/>
+      <grip:Input step="2" socket="0"/>
+    </grip:Connection>
+  </connections>
+  <settings>
+    <teamNumber>0</teamNumber>
+    <publishAddress>roboRIO-0-FRC.local</publishAddress>
+    <deployAddress>roboRIO-0-FRC.local</deployAddress>
+    <deployDir>/home/lvuser</deployDir>
+    <deployUser>lvuser</deployUser>
+    <deployJavaHome>/usr/local/frc/JRE/</deployJavaHome>
+    <deployJvmOptions>-Xmx50m -XX:-OmitStackTraceInFastThrow -XX:+HeapDumpOnOutOfMemoryError -XX:MaxNewSize=16m</deployJvmOptions>
+  </settings>
+  <codeGenerationSettings>
+    <language>Java</language>
+    <className>VisionTargetPipeline</className>
+    <implementWpilibPipeline>false</implementWpilibPipeline>
+    <saveDir>C:\Users\Lenovo\GRIP</saveDir>
+    <packageName></packageName>
+    <moduleName>grip</moduleName>
+  </codeGenerationSettings>
+</grip:Pipeline>
