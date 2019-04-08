@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="rpivision.main:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/rpivision_main_jar</output-path>
+    <root id="archive" name="rpivision.main.jar">
+      <element id="module-output" name="rpivision.main" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/wpiHal.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/ntcore.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/opencv-344.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/wpilibj.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/gson-2.7.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/cscore.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/wpiutil.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/cameraserver.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
