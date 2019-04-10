@@ -9,36 +9,36 @@
       <grip:Input step="0" socket="0"/>
       <grip:Input step="0" socket="1">
         <value>
-          <double>90.64748201438849</double>
-          <double>124.7098976109215</double>
+          <double>63.129496402877685</double>
+          <double>106.27986348122869</double>
         </value>
       </grip:Input>
       <grip:Input step="0" socket="2">
         <value>
-          <double>66.50179856115108</double>
-          <double>124.45392491467578</double>
+          <double>36.690647482014384</double>
+          <double>124.45392491467575</double>
         </value>
       </grip:Input>
       <grip:Input step="0" socket="3">
         <value>
-          <double>155.93525179856115</double>
-          <double>255.0</double>
+          <double>130.71043165467626</double>
+          <double>183.1996587030717</double>
         </value>
       </grip:Input>
-      <grip:Output step="0" socket="0" previewed="false"/>
+      <grip:Output step="0" socket="0" previewed="true"/>
     </grip:Step>
     <grip:Step name="CV erode">
       <grip:Input step="1" socket="0"/>
       <grip:Input step="1" socket="1"/>
       <grip:Input step="1" socket="2"/>
       <grip:Input step="1" socket="3">
-        <value>2.0</value>
+        <value>1.0</value>
       </grip:Input>
       <grip:Input step="1" socket="4">
         <value>BORDER_CONSTANT</value>
       </grip:Input>
       <grip:Input step="1" socket="5"/>
-      <grip:Output step="1" socket="0" previewed="false"/>
+      <grip:Output step="1" socket="0" previewed="true"/>
     </grip:Step>
     <grip:Step name="Find Contours">
       <grip:Input step="2" socket="0"/>
@@ -59,13 +59,13 @@
         <value>10.0</value>
       </grip:Input>
       <grip:Input step="3" socket="4">
-        <value>1000</value>
+        <value>1000.0</value>
       </grip:Input>
       <grip:Input step="3" socket="5">
         <value>10.0</value>
       </grip:Input>
       <grip:Input step="3" socket="6">
-        <value>1000</value>
+        <value>1000.0</value>
       </grip:Input>
       <grip:Input step="3" socket="7">
         <value>
@@ -74,36 +74,44 @@
         </value>
       </grip:Input>
       <grip:Input step="3" socket="8">
-        <value>1000000</value>
+        <value>1000000.0</value>
       </grip:Input>
       <grip:Input step="3" socket="9">
-        <value>0</value>
+        <value>0.0</value>
       </grip:Input>
       <grip:Input step="3" socket="10">
-        <value>0</value>
+        <value>0.0</value>
       </grip:Input>
       <grip:Input step="3" socket="11">
-        <value>1000</value>
+        <value>1000.0</value>
       </grip:Input>
-      <grip:Output step="3" socket="0" previewed="true"/>
+      <grip:Output step="3" socket="0" previewed="false"/>
+    </grip:Step>
+    <grip:Step name="Convex Hulls">
+      <grip:Input step="4" socket="0"/>
+      <grip:Output step="4" socket="0" previewed="true"/>
     </grip:Step>
   </steps>
   <connections>
     <grip:Connection>
-      <grip:Output step="0" socket="0" previewed="false"/>
+      <grip:Output step="2" socket="0" previewed="false"/>
+      <grip:Input step="3" socket="0"/>
+    </grip:Connection>
+    <grip:Connection>
+      <grip:Output step="0" socket="0" previewed="true"/>
       <grip:Input step="1" socket="0"/>
+    </grip:Connection>
+    <grip:Connection>
+      <grip:Output step="1" socket="0" previewed="true"/>
+      <grip:Input step="2" socket="0"/>
     </grip:Connection>
     <grip:Connection>
       <grip:Output source="0" socket="0" previewed="false"/>
       <grip:Input step="0" socket="0"/>
     </grip:Connection>
     <grip:Connection>
-      <grip:Output step="1" socket="0" previewed="false"/>
-      <grip:Input step="2" socket="0"/>
-    </grip:Connection>
-    <grip:Connection>
-      <grip:Output step="2" socket="0" previewed="false"/>
-      <grip:Input step="3" socket="0"/>
+      <grip:Output step="3" socket="0" previewed="false"/>
+      <grip:Input step="4" socket="0"/>
     </grip:Connection>
   </connections>
   <settings>
@@ -119,8 +127,8 @@
     <language>Java</language>
     <className>GripPipeline</className>
     <implementWpilibPipeline>false</implementWpilibPipeline>
-    <saveDir>C:\Users\Lenovo\GRIP</saveDir>
-    <packageName></packageName>
+    <saveDir>C:\Users\Lenovo\Documents</saveDir>
+    <packageName>ledpipeline</packageName>
     <moduleName>grip</moduleName>
   </codeGenerationSettings>
 </grip:Pipeline>

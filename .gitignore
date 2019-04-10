@@ -1,2 +1,5 @@
 #Ignore IDEA folder
 .idea/
+*.bin
+*.lock
+*.xml

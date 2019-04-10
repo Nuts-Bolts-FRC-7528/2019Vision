@@ -7,21 +7,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c73f5f2f-4b41-4a8c-b709-526501299af0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LEDPipeline.grip" beforeDir="false" afterPath="$PROJECT_DIR$/LEDPipeline.grip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/rpivision_main_jar/rpivision.main.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/rpivision_main_jar/rpivision.main.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Main$CameraConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/Main$CameraConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Main$CargoPipeline.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/Main$CargoPipeline.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Main$HatchPipeline.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/Main$HatchPipeline.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/build/" />
+    <ignored path="$PROJECT_DIR$/.gradle/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -33,68 +42,23 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3009">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="1039">
+              <caret line="874" column="5" selection-start-line="874" selection-start-column="5" selection-end-line="874" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3489#3490#0" expanded="true" />
-                <element signature="e#3571#3572#0" expanded="true" />
-                <element signature="e#10164#10165#0" expanded="true" />
-                <element signature="e#10213#10214#0" expanded="true" />
-                <element signature="e#10395#10396#0" expanded="true" />
-                <element signature="e#10439#10440#0" expanded="true" />
-                <element signature="e#10672#10673#0" expanded="true" />
-                <element signature="e#10721#10722#0" expanded="true" />
-                <element signature="e#10960#10961#0" expanded="true" />
-                <element signature="e#11011#11012#0" expanded="true" />
-                <element signature="e#11241#11242#0" expanded="true" />
-                <element signature="e#11289#11290#0" expanded="true" />
-                <element signature="e#20515#20516#0" expanded="true" />
-                <element signature="e#20564#20565#0" expanded="true" />
-                <element signature="e#20797#20798#0" expanded="true" />
-                <element signature="e#20846#20847#0" expanded="true" />
-                <element signature="e#21085#21086#0" expanded="true" />
-                <element signature="e#21136#21137#0" expanded="true" />
-                <element signature="e#21366#21367#0" expanded="true" />
-                <element signature="e#21414#21415#0" expanded="true" />
-                <element signature="e#29930#29931#0" expanded="true" />
-                <element signature="e#29979#29980#0" expanded="true" />
-                <element signature="e#30161#30162#0" expanded="true" />
-                <element signature="e#30205#30206#0" expanded="true" />
-                <element signature="e#30438#30439#0" expanded="true" />
-                <element signature="e#30487#30488#0" expanded="true" />
-                <element signature="e#30726#30727#0" expanded="true" />
-                <element signature="e#30777#30778#0" expanded="true" />
-                <element signature="e#44273#44274#0" expanded="true" />
-                <element signature="e#44322#44323#0" expanded="true" />
-                <element signature="e#44504#44505#0" expanded="true" />
-                <element signature="e#44548#44549#0" expanded="true" />
-                <element signature="e#44781#44782#0" expanded="true" />
-                <element signature="e#44830#44831#0" expanded="true" />
-                <element signature="e#45069#45070#0" expanded="true" />
-                <element signature="e#45120#45121#0" expanded="true" />
+                <element signature="e#26613#26625#0" expanded="true" />
+                <element signature="e#26696#26708#0" expanded="true" />
+                <element signature="e#26776#26788#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+        <entry file="file://$PROJECT_DIR$/../../GripPipeline.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/GRIP/LEDPipeline.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3655">
-              <caret line="223" selection-start-line="223" selection-end-line="223" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="515">
+              <caret line="262" column="1" selection-start-line="18" selection-end-line="262" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -143,7 +107,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/GRIP/HatchPipeline.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3604">
+            <state relative-caret-position="3366">
               <caret line="220" selection-start-line="18" selection-end-line="220" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -176,6 +140,7 @@
       <list>
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/GripPipeline.java" />
+        <option value="$PROJECT_DIR$/../../GripPipeline.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
       </list>
     </option>
@@ -198,17 +163,24 @@
           <expand>
             <path>
               <item name="rpivision" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rpivision" type="9c53a853:ProjectViewModuleGroupNode" />
+              <item name="2019Vision" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
               <item name="rpivision" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rpivision" type="9c53a853:ProjectViewModuleGroupNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="2019Vision" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="rpivision" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rpivision" type="9c53a853:ProjectViewModuleGroupNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="2019Vision" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="rpivision" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2019Vision" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -229,7 +201,8 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554841975450" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554849931478" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
@@ -264,8 +237,8 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49918166" visible="true" weight="0.26928896" />
-      <window_info id="Structure" order="1" sideWeight="0.5008183" side_tool="true" visible="true" weight="0.26928896" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49590835" visible="true" weight="0.27760968" />
+      <window_info id="Structure" order="1" sideWeight="0.5040917" side_tool="true" visible="true" weight="0.27760968" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="Capture Tool" order="4" />
@@ -277,7 +250,7 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3289689" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
@@ -325,30 +298,6 @@
     </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/GRIP/HatchPipeline.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3604">
-          <caret line="220" selection-start-line="18" selection-end-line="220" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/libs/cameraserver.jar!/edu/wpi/first/vision/VisionPipeline.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LEDReflectionPipeline.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
@@ -370,48 +319,87 @@
     <entry file="file://$PROJECT_DIR$/HatchPipeline.grip">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3009">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/GRIP/LEDPipeline.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3417">
+          <caret line="223" selection-start-line="223" selection-end-line="223" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3489#3490#0" expanded="true" />
-            <element signature="e#3571#3572#0" expanded="true" />
-            <element signature="e#10164#10165#0" expanded="true" />
-            <element signature="e#10213#10214#0" expanded="true" />
-            <element signature="e#10395#10396#0" expanded="true" />
-            <element signature="e#10439#10440#0" expanded="true" />
-            <element signature="e#10672#10673#0" expanded="true" />
-            <element signature="e#10721#10722#0" expanded="true" />
-            <element signature="e#10960#10961#0" expanded="true" />
-            <element signature="e#11011#11012#0" expanded="true" />
-            <element signature="e#11241#11242#0" expanded="true" />
-            <element signature="e#11289#11290#0" expanded="true" />
-            <element signature="e#20515#20516#0" expanded="true" />
-            <element signature="e#20564#20565#0" expanded="true" />
-            <element signature="e#20797#20798#0" expanded="true" />
-            <element signature="e#20846#20847#0" expanded="true" />
-            <element signature="e#21085#21086#0" expanded="true" />
-            <element signature="e#21136#21137#0" expanded="true" />
-            <element signature="e#21366#21367#0" expanded="true" />
-            <element signature="e#21414#21415#0" expanded="true" />
-            <element signature="e#29930#29931#0" expanded="true" />
-            <element signature="e#29979#29980#0" expanded="true" />
-            <element signature="e#30161#30162#0" expanded="true" />
-            <element signature="e#30205#30206#0" expanded="true" />
-            <element signature="e#30438#30439#0" expanded="true" />
-            <element signature="e#30487#30488#0" expanded="true" />
-            <element signature="e#30726#30727#0" expanded="true" />
-            <element signature="e#30777#30778#0" expanded="true" />
-            <element signature="e#44273#44274#0" expanded="true" />
-            <element signature="e#44322#44323#0" expanded="true" />
-            <element signature="e#44504#44505#0" expanded="true" />
-            <element signature="e#44548#44549#0" expanded="true" />
-            <element signature="e#44781#44782#0" expanded="true" />
-            <element signature="e#44830#44831#0" expanded="true" />
-            <element signature="e#45069#45070#0" expanded="true" />
-            <element signature="e#45120#45121#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/cameraserver.jar!/edu/wpi/first/vision/VisionPipeline.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/cameraserver.jar!/edu/wpi/first/vision/VisionRunner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="952">
+          <caret line="64" column="13" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/GRIP/HatchPipeline.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3366">
+          <caret line="220" selection-start-line="18" selection-end-line="220" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jrt://C:/Users/Public/frc2019/jdk!/java.base/java/util/ArrayList.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2567">
+          <caret line="178" column="13" selection-start-line="178" selection-start-column="12" selection-end-line="178" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../GripPipeline.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="515">
+          <caret line="262" column="1" selection-start-line="18" selection-end-line="262" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1039">
+          <caret line="874" column="5" selection-start-line="874" selection-start-column="5" selection-end-line="874" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#26613#26625#0" expanded="true" />
+            <element signature="e#26696#26708#0" expanded="true" />
+            <element signature="e#26776#26788#0" expanded="true" />
           </folding>
         </state>
       </provider>
